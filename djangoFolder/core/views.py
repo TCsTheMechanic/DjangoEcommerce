@@ -6,9 +6,18 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    texts = ['texto 1', 'texto 2']
+    texts = ['Aprendendo Django', 'May the force be with us']
     context = {
-        'title': 'django ecommerce',
+        'title': 'Django E-commerce',
         'texts': texts,
     }
     return render(request, 'index.html', context)
+
+def contact(request):
+    return render(request, 'contact.html')
+
+def productList(request):
+    return render(request, 'productList.html')
+
+def product(request):
+    return render(request, 'product.html')
